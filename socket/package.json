@@ -1,0 +1,17 @@
+{
+  "name": "nogizaka46-vn-chat",
+  "version": "0.0.1",
+  "description": "Nogizaka46 VN chat socket id application",
+  "dependencies": {
+    "express": "^4.15.2",
+    "firebase-admin": "^8.9.2",
+    "socket.io": "^2.3.0",
+    "uuid": "^3.4.0"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": "8.17.0"
+  }
+}

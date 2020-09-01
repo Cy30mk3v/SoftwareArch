@@ -1,0 +1,65 @@
+@import "~antd/dist/antd.less";
+
+body {
+  width: 100%;
+  min-height: 100%;
+  font-family: "Roboto";
+}
+
+::selection {
+  color: #fff !important;
+  background: #1890ff !important;
+}
+
+#root,
+.App,
+#main {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+}
+
+.ant-input {
+  border-radius: 10px !important;
+}
+
+.rocketModal .ant-modal-header {
+  border-radius: 20px 20px 0 0;
+  background-color: @primary-color;
+  padding: 24px;
+}
+
+.rocketModal .ant-modal-content {
+  border-radius: 20px;
+}
+
+.rocketModal .ant-modal-title {
+  text-align: center;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.replyTo {
+  font-size: 13px;
+}
+
+.mainNotifyNewMessage .ant-notification-notice-close {
+  color: #fff !important;
+}
+
+.mainNotifyNewMessage .ant-notification-notice-message {
+  color: #fff !important;
+}
+
+.notifyNewMessage img {
+  max-height: 80px !important;
+  max-width: 128px !important;
+  border-radius: 6px !important;
+}
+
+.mainNotifyNewMessage {
+  padding: 12px 12px 8px 12px !important;
+  border-radius: 16px !important;
+  background-color: #673ab7 !important;
+  color: #fff !important;
+}

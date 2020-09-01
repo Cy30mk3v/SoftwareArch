@@ -1,0 +1,37 @@
+image: node:8.17.0
+
+cache:
+  paths:
+    - /node_modules/
+
+stages:
+  - deploy_react_js
+  - deploy_staging
+
+# Install node module
+Hosting:
+  # when: manual
+  stage: deploy_react_js
+  when: manual
+  script:
+    # - npm install -g yarn
+    - yarn
+    - npm i -g firebase-tools
+    - echo 'REACT_APP_SOCKET_ENDPOINT="$REACT_APP_SOCKET_ENDPOINT"' > .env.production
+    - yarn build
+    - firebase use $FIREBASE_APP_NAME
+    - firebase deploy --token "$FIREBASE_TOKEN"
+
+# Deploy to staging
+Production:
+  stage: deploy_staging
+  image: ruby:latest
+  when: manual
+  only:
+    - master
+  script:
+    - apt-get update -qy
+    - apt-get install -y ruby-dev
+    - gem install dpl
+    - cd socket
+    - dpl --provider=heroku --app=$HEROKU_APP_NAME --api-key=$HEROKU_API_KEY

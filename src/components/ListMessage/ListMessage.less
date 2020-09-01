@@ -1,0 +1,56 @@
+@import "~antd/dist/antd.less";
+
+#messages {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  max-height: calc(100% - 108px);
+  overflow-y: scroll;
+}
+
+#messages .ant-card-meta-description {
+  font-size: 16px;
+  color: #505256;
+}
+
+#messages .my-message .ant-card-meta-description {
+  direction: ltr;
+  text-align: right;
+}
+
+#messages .my-message .ant-card-meta {
+  direction: rtl;
+}
+
+#messages .ant-card-meta-avatar {
+  padding-right: 12px;
+}
+
+#messages .my-message .ant-card-meta-avatar {
+  padding-right: 0;
+  padding-left: 12px;
+  float: right;
+}
+
+#messages .ant-card-meta-description .messageText img,
+.blockquote-wrapper .nogizaka-chan-message {
+  max-width: 200px;
+  border-radius: 6px;
+  margin-left: 5px;
+  margin-right: 5px;
+  max-height: 300px;
+}
+
+.blockquote-wrapper {
+  float: left;
+  font-style: italic;
+  background-color: #1890ff;
+  padding: 4px 8px;
+  color: #fff;
+  border-radius: 4px 20px 20px 4px;
+}
+
+.my-message .blockquote-wrapper {
+  float: right;
+  border-radius: 20px 4px 4px 20px;
+}

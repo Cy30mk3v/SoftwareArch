@@ -1,0 +1,6 @@
+{
+  "name": "Nogizaka46Chat",
+  "description": "my first socket.io app",
+  "keywords": ["node", "express", "heroku"],
+  "image": "heroku/nodejs"
+}
